@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zelion Forge</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #0e0e11;
+      color: #f1f1f1;
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #1a1a22, #0e0e11);
+    }
+
+    header img {
+      max-width: 220px;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-size: 2.3em;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.1em;
+      color: #cfcfcf;
+      max-width: 650px;
+      margin: 15px auto 0;
+    }
+
+    nav {
+      background-color: #15151d;
+      padding: 12px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: #f1f1f1;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #1b1b24;
+      border-radius: 14px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      margin: 10px 0 6px;
+    }
+
+    .card p {
+      font-size: 0.9em;
+      color: #bdbdbd;
+    }
+
+    .cta {
+      margin-top: 15px;
+      display: inline-block;
+      padding: 10px 18px;
+      background-color: #6f42c1;
+      color: #fff;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 0.9em;
+    }
+
+    footer {
+      background-color: #15151d;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 0.85em;
+      color: #b0b0b0;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <!-- depois é só trocar logo.png pela sua logo -->
+  <img src="logo.png" alt="Zelion Forge Logo">
+  <h1>Zelion Forge</h1>
+  <p>
+    Criações 3D, colecionáveis e ideias que nasceram do universo geek —  
+    feitas por quem cresceu, mas nunca deixou de criar.
+  </p>
+</header>
+
+<nav>
+  <a href="#colecao">Coleção</a>
+  <a href="#sobre">Sobre</a>
+  <a href="#contato">Contato</a>
+</nav>
+
+<section id="colecao">
+  <h2>Coleção & Projetos</h2>
+  <p>
+    Os itens apresentados neste site incluem criações autorais, projetos sob encomenda,
+    peças de coleção pessoal e demonstrações técnicas de impressão 3D.
+    Este site não realiza vendas diretas.
+  </p>
+
+  <div class="products">
+
+    <div class="card">
+      <img src="exemplo-trex.jpg" alt="T-Rex Esqueleto 3D">
+      <h3>T-Rex Esqueleto Articulado</h3>
+      <p>
+        Modelo 3D em formato de quebra-cabeça.  
+        Pode incluir manual digital para montagem.
+      </p>
+      <a class="cta" href="#contato">Entrar em contato</a>
+    </div>
+
+    <div class="card">
+      <img src="exemplo-chaveiro.jpg" alt="Chaveiros 3D">
+      <h3>Chaveiros 3D</h3>
+      <p>
+        Projetos autorais e sob pedido.  
+        Produção personalizada sob consulta.
+      </p>
+      <a class="cta" href="#contato">Entrar em contato</a>
+    </div>
+
+    <div class="card">
+      <img src="exemplo-action.jpg" alt="Action Figures 3D">
+      <h3>Action Figures</h3>
+      <p>
+        Miniaturas estilizadas impressas em 3D.  
+        Alguns modelos são apenas demonstrativos.
+      </p>
+      <a class="cta" href="#contato">Entrar em contato</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="sobre">
+  <h2>Sobre a Zelion Forge</h2>
+  <p>
+    A Zelion Forge é um projeto independente focado em impressão 3D, colecionáveis
+    e desenvolvimento criativo.
+  </p>
+  <p>
+    Alguns itens apresentados utilizam modelos de terceiros e são exibidos
+    apenas para fins demonstrativos ou como parte de coleção pessoal.
+    Os créditos aos autores dos modelos 3D são sempre respeitados.
+  </p>
+</section>
+
+<section id="contato">
+  <h2>Contato</h2>
+  <p>
+    Para informações, encomendas ou dúvidas sobre qualquer projeto apresentado,
+    entre em contato diretamente:
+  </p>
+  <p>
+    📲 WhatsApp: <strong>(adicionar número)</strong><br>
+    📸 Instagram: <strong>@zelionforge</strong>
+  </p>
+</section>
+
+<footer>
+  <p>
+    © 2026 — Zelion Forge<br>
+    Este site não realiza vendas diretas.  
+    Personagens e marcas pertencem aos seus respectivos criadores.
+  </p>
+</footer>
+
+</body>
+</html>
