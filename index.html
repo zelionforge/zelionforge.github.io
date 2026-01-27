@@ -6,86 +6,7 @@
   <title>Zelion Forge</title>
 
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #0e0e11;
-      color: #f1f1f1;
-    }
-
-    header {
-      text-align: center;
-      padding: 80px 20px;
-      background: linear-gradient(135deg, #1a1a22, #0e0e11);
-    }
-
-    header img {
-      max-width: 720px;
-      margin-bottom: 20px;
-    }
-
-    header p {
-      font-size: 1.1em;
-      color: #cfcfcf;
-      max-width: 650px;
-      margin: 15px auto 0;
-    }
-
-    nav {
-      background-color: #15151d;
-      padding: 12px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    nav a {
-      color: #f1f1f1;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background-color: #1b1b24;
-      border-radius: 14px;
-      padding: 20px;
-      text-align: center;
-      text-decoration: none;
-      color: inherit;
-      transition: transform 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 12px;
-    }
-
-    footer {
-      background-color: #15151d;
-      padding: 30px 20px;
-      text-align: center;
-      font-size: 0.85em;
-      color: #b0b0b0;
-    }
+    <link rel="stylesheet" href="css/style.css">
   </style>
 </head>
 
@@ -110,19 +31,29 @@
   <div class="products">
 
     <a href="quebracabecas.html" class="card">
-      <img src="imagens/trex.jpg" alt="Quebra-cabeças 3D">
+      <div class="image-slider">
+        <img src="imagens/trex1.jpg" class="active">
+        <img src="imagens/trex2.jpg">
+        <img src="imagens/trex3.jpg">
       <h3>Quebra-cabeças 3D</h3>
       <p>Modelos impressos em 3D para montagem</p>
+      </div>
     </a>
 
     <a href="chaveiros.html" class="card">
-      <img src="imagens/chaveiros.jpg" alt="Chaveiros 3D">
+      <div class="image-slider">
+        <img src="imagens/trex1.jpg" class="active">
+        <img src="imagens/trex2.jpg">
+        <img src="imagens/trex3.jpg">
       <h3>Chaveiros 3D</h3>
       <p>Projetos autorais e personalizados</p>
     </a>
 
     <a href="action-figures.html" class="card">
-      <img src="imagens/action.jpg" alt="Action Figures 3D">
+      <div class="image-slider">
+        <img src="imagens/trex1.jpg" class="active">
+        <img src="imagens/trex2.jpg">
+        <img src="imagens/trex3.jpg">
       <h3>Action Figures</h3>
       <p>Miniaturas estilizadas em impressão 3D</p>
     </a>
@@ -137,5 +68,6 @@
 
 </body>
 </html>
+
 
 
