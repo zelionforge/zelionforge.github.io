@@ -1,80 +1,162 @@
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #0e0e11;
-      color: #f1f1f1;
-    }
+/* RESET BÁSICO */
+* {
+  box-sizing: border-box;
+}
 
-    header {
-      text-align: center;
-      padding: 80px 20px;
-      background: linear-gradient(135deg, #1a1a22, #0e0e11);
-    }
+/* ===== BODY ===== */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0e0e11;
+  color: #f1f1f1;
+}
 
-    header img {
-      max-width: 720px;
-      margin-bottom: 20px;
-    }
+/* ===== HEADER ===== */
+header {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #1a1a22, #0e0e11);
+}
 
-    header p {
-      font-size: 1.1em;
-      color: #cfcfcf;
-      max-width: 650px;
-      margin: 15px auto 0;
-    }
+header img {
+  max-width: 720px;
+  width: 100%;
+  margin-bottom: 20px;
+}
 
-    nav {
-      background-color: #15151d;
-      padding: 12px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
+header p {
+  font-size: 1.1em;
+  color: #cfcfcf;
+  max-width: 650px;
+  margin: 15px auto 0;
+}
 
-    nav a {
-      color: #f1f1f1;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+/* ===== NAV ===== */
+nav {
+  background-color: #15151d;
+  padding: 12px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
 
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
+nav a {
+  color: #f1f1f1;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
+nav a:hover {
+  color: #9b6cff;
+}
 
-    .card {
-      background-color: #1b1b24;
-      border-radius: 14px;
-      padding: 20px;
-      text-align: center;
-      text-decoration: none;
-      color: inherit;
-      transition: transform 0.2s ease;
-    }
+/* ===== SECTIONS ===== */
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
 
-    .card:hover {
-      transform: translateY(-5px);
-    }
+section h2 {
+  margin-bottom: 10px;
+}
 
-    .card img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 12px;
-    }
+/* ===== GRID DE PRODUTOS ===== */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
 
-    footer {
-      background-color: #15151d;
-      padding: 30px 20px;
-      text-align: center;
-      font-size: 0.85em;
-      color: #b0b0b0;
-    }
+/* ===== CARD ===== */
+.card {
+  background-color: #1b1b24;
+  border-radius: 14px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* ===== SLIDER DE IMAGENS ===== */
+.image-slider {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.image-slider img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: fade 9s infinite;
+}
+
+/* delays automáticos */
+.image-slider img:nth-child(1) { animation-delay: 0s; }
+.image-slider img:nth-child(2) { animation-delay: 3s; }
+.image-slider img:nth-child(3) { animation-delay: 6s; }
+
+/* animação */
+@keyframes fade {
+  0%   { opacity: 0; }
+  10%  { opacity: 1; }
+  30%  { opacity: 1; }
+  40%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* leve destaque ao passar o mouse */
+.card:hover .image-slider img {
+  filter: brightness(1.05);
+}
+
+/* ===== TEXTO DO CARD ===== */
+.card h3 {
+  margin: 10px 0 6px;
+}
+
+.card p {
+  font-size: 0.9em;
+  color: #bdbdbd;
+}
+
+/* ===== BOTÃO (USADO NAS PÁGINAS INTERNAS) ===== */
+.cta {
+  margin-top: 15px;
+  display: inline-block;
+  padding: 10px 18px;
+  background-color: #6f42c1;
+  color: #fff;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+.cta:hover {
+  background-color: #8056d8;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #15151d;
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 0.85em;
+  color: #b0b0b0;
+}
