@@ -1,17 +1,24 @@
-/* RESET BÁSICO */
+/* =========================
+   RESET BÁSICO
+========================= */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* ===== BODY ===== */
+/* =========================
+   BODY
+========================= */
 body {
-  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #0e0e11;
   color: #f1f1f1;
 }
 
-/* ===== HEADER ===== */
+/* =========================
+   HEADER
+========================= */
 header {
   text-align: center;
   padding: 80px 20px;
@@ -31,7 +38,9 @@ header p {
   margin: 15px auto 0;
 }
 
-/* ===== NAV ===== */
+/* =========================
+   NAV
+========================= */
 nav {
   background-color: #15151d;
   padding: 12px;
@@ -46,16 +55,19 @@ nav a {
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.2s ease;
 }
 
 nav a:hover {
   color: #9b6cff;
 }
 
-/* ===== SECTIONS ===== */
+/* =========================
+   SECTIONS
+========================= */
 section {
   padding: 60px 20px;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
 }
 
@@ -63,17 +75,22 @@ section h2 {
   margin-bottom: 10px;
 }
 
-/* ===== GRID DE PRODUTOS ===== */
+/* =========================
+   GRID DE PRODUTOS
+========================= */
 .products {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
+  margin-top: 30px;
 }
 
-/* ===== CARD ===== */
+/* =========================
+   CARD
+========================= */
 .card {
   background-color: #1b1b24;
-  border-radius: 14px;
+  border-radius: 18px;
   padding: 20px;
   text-align: center;
   text-decoration: none;
@@ -83,17 +100,19 @@ section h2 {
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.45);
 }
 
-/* ===== SLIDER DE IMAGENS ===== */
+/* =========================
+   SLIDER DE IMAGENS
+========================= */
 .image-slider {
   position: relative;
   width: 100%;
-  height: 180px;
+  height: 260px; /* mais alto = menos corte */
   overflow: hidden;
-  border-radius: 10px;
-  margin-bottom: 12px;
+  border-radius: 14px;
+  margin-bottom: 14px;
 }
 
 .image-slider img {
@@ -120,14 +139,17 @@ section h2 {
   100% { opacity: 0; }
 }
 
-/* leve destaque ao passar o mouse */
+/* leve destaque no hover */
 .card:hover .image-slider img {
   filter: brightness(1.05);
 }
 
-/* ===== TEXTO DO CARD ===== */
+/* =========================
+   TEXTO DO CARD
+========================= */
 .card h3 {
   margin: 10px 0 6px;
+  font-size: 1.1em;
 }
 
 .card p {
@@ -135,27 +157,45 @@ section h2 {
   color: #bdbdbd;
 }
 
-/* ===== BOTÃO (USADO NAS PÁGINAS INTERNAS) ===== */
+/* =========================
+   BOTÃO / CTA
+========================= */
 .cta {
-  margin-top: 15px;
+  margin-top: 18px;
   display: inline-block;
-  padding: 10px 18px;
+  padding: 10px 20px;
   background-color: #6f42c1;
   color: #fff;
-  border-radius: 20px;
+  border-radius: 24px;
   text-decoration: none;
   font-size: 0.9em;
+  transition: background-color 0.2s ease;
 }
 
 .cta:hover {
   background-color: #8056d8;
 }
 
-/* ===== FOOTER ===== */
+/* =========================
+   FOOTER
+========================= */
 footer {
   background-color: #15151d;
   padding: 30px 20px;
   text-align: center;
   font-size: 0.85em;
   color: #b0b0b0;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+@media (max-width: 768px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+
+  .image-slider {
+    height: 220px;
+  }
 }
