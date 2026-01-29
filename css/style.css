@@ -55,6 +55,7 @@ nav a {
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.2s ease;
 }
 
 nav a:hover {
@@ -62,7 +63,7 @@ nav a:hover {
 }
 
 /* =========================
-   SECTIONS
+   SECTIONS (GLOBAL)
 ========================= */
 section {
   padding: 60px 20px;
@@ -71,60 +72,7 @@ section {
 }
 
 /* =========================
-   PÁGINA DE PRODUTO
-========================= */
-.product-page {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-}
-
-/* =========================
-   GALERIA
-========================= */
-.product-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-}
-
-.product-gallery img {
-  width: 100%;
-  border-radius: 14px;
-  object-fit: cover;
-  cursor: zoom-in;
-  transition: transform 0.2s ease;
-}
-
-.product-gallery img:hover {
-  transform: scale(1.02);
-}
-
-/* =========================
-   INFO DO PRODUTO
-========================= */
-.product-info h2 {
-  margin-bottom: 12px;
-}
-
-.product-description {
-  margin-bottom: 16px;
-  color: #cfcfcf;
-  line-height: 1.5;
-}
-
-.product-details {
-  list-style: none;
-  margin-bottom: 20px;
-}
-
-.product-details li {
-  margin-bottom: 6px;
-  font-size: 0.95em;
-}
-
-/* =========================
-   BOTÃO CTA
+   BOTÃO CTA (GLOBAL)
 ========================= */
 .cta {
   margin-top: 18px;
@@ -134,6 +82,7 @@ section {
   color: #fff;
   border-radius: 24px;
   text-decoration: none;
+  transition: background-color 0.2s ease;
 }
 
 .cta:hover {
@@ -141,158 +90,3 @@ section {
 }
 
 /* =========================
-   FOOTER
-========================= */
-footer {
-  background-color: #15151d;
-  padding: 30px 20px;
-  text-align: center;
-  font-size: 0.85em;
-  color: #b0b0b0;
-}
-
-/* =========================
-   LIGHTBOX
-========================= */
-#lightbox {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.85);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-}
-
-#lightbox img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 14px;
-  animation: zoomIn 0.25s ease;
-}
-
-#lightbox .close {
-  position: absolute;
-  top: 30px;
-  right: 40px;
-  font-size: 40px;
-  color: #fff;
-  cursor: pointer;
-}
-
-@keyframes zoomIn {
-  from {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-/* =========================
-   RESPONSIVO
-========================= */
-@media (max-width: 768px) {
-  .product-page {
-    grid-template-columns: 1fr;
-  }
-
-  .product-gallery {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* =========================
-   PÁGINA DE PRODUTO (ISOLADA)
-========================= */
-.product-page {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-/* GALERIA – só afeta a página do produto */
-.product-page .product-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-}
-
-.product-page .product-gallery img {
-  width: 100%;
-  max-height: 260px;
-  object-fit: cover;
-  border-radius: 14px;
-  cursor: zoom-in;
-  transition: transform 0.2s ease;
-}
-
-.product-page .product-gallery img:hover {
-  transform: scale(1.02);
-}
-
-/* INFO */
-.product-page .product-info h2 {
-  margin-bottom: 12px;
-}
-
-.product-page .product-description {
-  margin-bottom: 16px;
-  color: #cfcfcf;
-  line-height: 1.5;
-}
-
-.product-page .product-details {
-  list-style: none;
-  margin-bottom: 20px;
-}
-
-.product-page .product-details li {
-  margin-bottom: 6px;
-  font-size: 0.95em;
-}
-
-/* =========================
-   LIGHTBOX (ISOLADO)
-========================= */
-#lightbox {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.85);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-}
-
-#lightbox img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 14px;
-}
-
-#lightbox .close {
-  position: absolute;
-  top: 30px;
-  right: 40px;
-  font-size: 40px;
-  color: #fff;
-  cursor: pointer;
-}
-
-/* =========================
-   RESPONSIVO – PRODUTO
-========================= */
-@media (max-width: 768px) {
-  .product-page {
-    grid-template-columns: 1fr;
-  }
-
-  .product-page .product-gallery {
-    grid-template-columns: 1fr;
-  }
-}
