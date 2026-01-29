@@ -199,3 +199,57 @@ footer {
     height: 220px;
   }
 }
+
+/* =========================
+   PÁGINA DE PRODUTO
+========================= */
+.product-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* GALERIA */
+.product-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.product-gallery img {
+  width: 100%;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+/* INFO */
+.product-info h2 {
+  margin-bottom: 12px;
+}
+
+.product-description {
+  margin-bottom: 16px;
+  color: #cfcfcf;
+  line-height: 1.5;
+}
+
+.product-details {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.product-details li {
+  margin-bottom: 6px;
+  font-size: 0.95em;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .product-page {
+    grid-template-columns: 1fr;
+  }
+
+  .product-gallery {
+    grid-template-columns: 1fr;
+  }
+}
