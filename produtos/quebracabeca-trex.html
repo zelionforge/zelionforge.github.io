@@ -2,51 +2,92 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Quebra-cabeça T-Rex</title>
-  <link rel="stylesheet" href="../../style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T-Rex Esqueleto 3D | Zelion Forge</title>
+
+  <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
 
-<main class="product-container">
+<header>
+  <img src="/imagens/logo.png" alt="Zelion Forge Logo">
+</header>
+
+<nav>
+  <a href="/index.html">Início</a>
+  <a href="/quebracabecas.html">Quebra-cabeças</a>
+</nav>
+
+<section class="product-layout">
 
   <!-- GALERIA -->
-  <section class="product-gallery">
-    <img id="mainImage" src="../../img/trex/1.jpg">
+  <div class="product-viewer">
+    <button class="nav prev" onclick="prevImg()">‹</button>
 
-    <div class="gallery-controls">
-      <button onclick="prevImage()">❮</button>
-      <button onclick="nextImage()">❯</button>
-    </div>
-  </section>
+    <img id="viewer-img" src="/imagens/qc-trex1.jpg" onclick="openLightbox()">
+
+    <button class="nav next" onclick="nextImg()">›</button>
+  </div>
 
   <!-- INFO -->
-  <section class="product-info">
-    <h1>Quebra-cabeça T-Rex</h1>
+  <div class="product-info">
+
+    <h2>T-Rex Esqueleto 3D</h2>
 
     <p>
-      Quebra-cabeça colecionável produzido por impressão 3D,
-      com encaixes robustos e design exclusivo Zelion Forge.
+      Modelo tridimensional inspirado em esqueletos de dinossauros,
+      desenvolvido para montagem manual e exibição.
     </p>
 
-    <a class="contact-btn"
-       href="https://wa.me/55SEUNUMERO"
-       target="_blank">
-       Entrar em contato com o revendedor
+    <ul>
+      <li><strong>Tipo:</strong> Quebra-cabeça 3D</li>
+      <li><strong>Material:</strong> Plástico (impressão 3D)</li>
+      <li><strong>Montagem:</strong> Manual, sem cola</li>
+    </ul>
+
+    <a href="https://wa.me/SEUNUMEROAQUI" class="cta" target="_blank">
+      Entrar em contato com o revendedor
     </a>
 
-    <small class="legal">
-      © Personagem utilizado apenas como item colecionável.
-      Direitos pertencem aos seus respectivos detentores.
-    </small>
-  </section>
+  </div>
 
-</main>
+</section>
 
 <!-- LIGHTBOX -->
 <div id="lightbox" onclick="closeLightbox()">
-  <img id="lightboxImg">
+  <img id="lightbox-img">
 </div>
 
-<script src="../../js/trex.js"></script>
+<script>
+  const images = [
+    "/imagens/qc-trex1.jpg",
+    "/imagens/qc-trex2.jpg",
+    "/imagens/qc-trex3.jpg"
+  ];
+
+  let current = 0;
+  const viewer = document.getElementById("viewer-img");
+
+  function nextImg() {
+    current = (current + 1) % images.length;
+    viewer.src = images[current];
+  }
+
+  function prevImg() {
+    current = (current - 1 + images.length) % images.length;
+    viewer.src = images[current];
+  }
+
+  function openLightbox() {
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = viewer.src;
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+  }
+</script>
+
 </body>
 </html>
