@@ -446,3 +446,19 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+/* =========================
+   GRID 2 CARDS (REUTILIZA HOME)
+========================= */
+
+.products-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .products-2 {
+    grid-template-columns: 1fr;
+  }
+}
