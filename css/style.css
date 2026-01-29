@@ -250,3 +250,63 @@ footer {
   color: #fff;
   cursor: pointer;
 }
+/* =========================
+   QUEBRA-CABEÇAS – CATEGORIA
+   ========================= */
+
+.qb-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.qb-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.qb-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.qb-card {
+  text-decoration: none;
+  color: inherit;
+}
+
+.qb-card h2 {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 1.1rem;
+}
+
+/* CARROSSEL */
+.qb-carousel {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.qb-carousel img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.qb-carousel img.active {
+  opacity: 1;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .qb-grid {
+    grid-template-columns: 1fr;
+  }
+}
