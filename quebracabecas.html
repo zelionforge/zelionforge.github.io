@@ -2,40 +2,64 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Quebra-cabeças | Zelion Forge</title>
-  <link rel="stylesheet" href="../style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quebra-cabeças 3D | Zelion Forge</title>
+
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<main class="qb-container">
+<header>
+  <img src="imagens/logo.png" alt="Zelion Forge Logo">
+  <p>Quebra-cabeças 3D articulados e colecionáveis — veja as criações!</p>
+</header>
 
-  <h1 class="qb-title">Quebra-cabeças Colecionáveis</h1>
+<nav>
+  <a href="index.html">Início</a>
+  <a href="quebracabecas.html">Quebra-cabeças</a>
+</nav>
 
-  <section class="qb-grid">
+<section class="qb-container">
 
-    <!-- CARD 1 -->
+  <h2>Quebra-cabeças 3D</h2>
+  <p>
+    Modelos 3D impressos para montagem.  
+    Alguns itens são exibidos apenas para fins demonstrativos ou como parte de coleção pessoal.
+  </p>
+
+  <div class="qb-grid">
+
+    <!-- CARD T-REX -->
     <a href="produtos/quebracabeca-trex.html" class="qb-card">
       <div class="qb-carousel">
-        <img src="../img/trex/1.jpg">
-        <img src="../img/trex/2.jpg">
-        <img src="../img/trex/3.jpg">
+        <img src="imagens/qc-trex1.jpg" class="active">
+        <img src="imagens/qc-trex2.jpg">
+        <img src="imagens/qc-trex3.jpg">
       </div>
-      <h2>Quebra-cabeça T-Rex</h2>
+      <h3>T-Rex Esqueleto</h3>
     </a>
 
-    <!-- CARD 2 (exemplo) -->
-    <a href="#" class="qb-card">
+    <!-- FUTURO CARD (modelo base) -->
+    <!--
+    <a href="produtos/quebracabeca-outro.html" class="qb-card">
       <div class="qb-carousel">
-        <img src="../img/outro/1.jpg">
-        <img src="../img/outro/2.jpg">
+        <img src="imagens/outro1.jpg" class="active">
+        <img src="imagens/outro2.jpg">
       </div>
-      <h2>Quebra-cabeça X</h2>
+      <h3>Outro Modelo</h3>
     </a>
+    -->
 
-  </section>
+  </div>
 
-</main>
+</section>
 
-<script src="../js/quebracabecas.js"></script>
+<footer>
+  © 2026 — Zelion Forge  
+  <br>Este site não realiza vendas diretas.
+</footer>
+
+<script src="js/quebracabecas.js"></script>
 </body>
 </html>
