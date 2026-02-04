@@ -37,4 +37,42 @@
         <img src="/imagens/qc-trex3.jpg">
       </div>
       <h3>Quebra-cabeças 3D</h3>
-      <p>M
+      <p>Modelos impressos em 3D para montagem</p>
+    </a>
+
+    <!-- CHAVEIROS -->
+    <a href="/home/chaveiros.html" class="card">
+      <div class="image-slider">
+        <img src="/imagens/chaveiro1.jpg">
+        <img src="/imagens/chaveiro2.jpg">
+        <img src="/imagens/chaveiro3.jpg">
+      </div>
+      <h3>Chaveiros 3D</h3>
+      <p>Projetos autorais e personalizados</p>
+    </a>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 — Zelion Forge  
+  <br>Este site não realiza vendas diretas.
+</footer>
+
+<script>
+  document.querySelectorAll(".image-slider").forEach(slider => {
+    const images = slider.querySelectorAll("img");
+    let index = 0;
+
+    images[index].style.opacity = 1;
+
+    setInterval(() => {
+      images[index].style.opacity = 0;
+      index = (index + 1) % images.length;
+      images[index].style.opacity = 1;
+    }, 2500);
+  });
+</script>
+
+</body>
+</html>
