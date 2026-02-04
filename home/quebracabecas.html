@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quebra-cabeças 3D | Zelion Forge</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+  <img src="imagens/logo.png" alt="Zelion Forge Logo">
+  <p>
+    Quebra-cabeças 3D articulados e colecionáveis  
+    desenvolvidos para montagem e exibição.
+  </p>
+</header>
+
+<nav>
+  <a href="index.html">Início</a>
+  <a href="quebracabecas.html">Quebra-cabeças</a>
+</nav>
+
+<section>
+
+  <h2>Quebra-cabeças 3D</h2>
+  <p>
+    Modelos impressos em 3D para montagem manual.
+    Cada card mostra uma prévia do que você encontra dentro da coleção.
+  </p>
+
+  <div class="products products-2">
+
+    <!-- T-REX -->
+    <a href="produtos/quebracabeca-trex.html" class="card">
+      <div class="image-slider">
+        <img src="imagens/qc-trex1.jpg">
+        <img src="imagens/qc-trex2.jpg">
+        <img src="imagens/qc-trex3.jpg">
+      </div>
+      <h3>T-Rex Esqueleto</h3>
+      <p>Quebra-cabeça 3D articulado</p>
+    </a>
+
+  </div>
+
+  <p style="margin-top:40px;">
+    <a href="index.html">← Voltar para a coleção</a>
+  </p>
+
+</section>
+
+<footer>
+  © 2026 — Zelion Forge  
+  <br>Este site não realiza vendas diretas.
+</footer>
+
+<script>
+  document.querySelectorAll(".image-slider").forEach(slider => {
+    const images = slider.querySelectorAll("img");
+    let index = 0;
+
+    images[index].style.opacity = 1;
+
+    setInterval(() => {
+      images[index].style.opacity = 0;
+      index = (index + 1) % images.length;
+      images[index].style.opacity = 1;
+    }, 2500);
+  });
+</script>
+
+</body>
+</html>
