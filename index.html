@@ -10,66 +10,73 @@
 
 <body>
 
-<nav>
-  <a href="/index.html">Início</a>
-  <a href="#colecao">Coleção</a>
-</nav>
+  <!-- NAV -->
+  <nav>
+    <a href="/index.html">Início</a>
+    <a href="#colecao">Coleção</a>
+  </nav>
 
-<header>
-  <img src="/imagens/logo.png" alt="Zelion Forge Logo">
-  <p>
-    Criações 3D, colecionáveis e ideias que nasceram do universo geek —  
-    feitas por quem cresceu, mas nunca deixou de criar.
-  </p>
-</header>
+  <!-- HEADER -->
+  <header>
+    <img src="/imagens/logo.png" alt="Zelion Forge Logo">
+    <p>
+      Criações 3D, colecionáveis e ideias que nasceram do universo geek —  
+      feitas por quem cresceu, mas nunca deixou de criar.
+    </p>
+  </header>
 
-<section id="colecao">
-  <h2>Coleção & Projetos</h2>
+  <!-- COLEÇÃO -->
+  <section id="colecao">
+    <h2>Coleção & Projetos</h2>
 
-  <div class="products">
+    <div class="products">
 
-    <a href="/home/quebracabecas.html" class="card">
-      <div class="image-slider">
-        <img src="/imagens/qc-trex1.jpg">
-        <img src="/imagens/qc-trex2.jpg">
-        <img src="/imagens/qc-trex3.jpg">
-      </div>
-      <h3>Quebra-cabeças 3D</h3>
-      <p>Modelos impressos em 3D para montagem</p>
-    </a>
+      <!-- CARD 1 -->
+      <a href="/home/quebracabecas.html" class="card">
+        <div class="image-slider">
+          <img src="/imagens/qc-trex1.jpg" alt="Quebra-cabeça 3D 1">
+          <img src="/imagens/qc-trex2.jpg" alt="Quebra-cabeça 3D 2">
+          <img src="/imagens/qc-trex3.jpg" alt="Quebra-cabeça 3D 3">
+        </div>
+        <h3>Quebra-cabeças 3D</h3>
+        <p>Modelos impressos em 3D para montagem</p>
+      </a>
 
-    <a href="/home/chaveiros.html" class="card">
-      <div class="image-slider">
-        <img src="/imagens/chaveiro1.jpg">
-        <img src="/imagens/chaveiro2.jpg">
-        <img src="/imagens/chaveiro3.jpg">
-      </div>
-      <h3>Chaveiros 3D</h3>
-      <p>Projetos autorais e personalizados</p>
-    </a>
+      <!-- CARD 2 -->
+      <a href="/home/chaveiros.html" class="card">
+        <div class="image-slider">
+          <img src="/imagens/chaveiro1.jpg" alt="Chaveiro 3D 1">
+          <img src="/imagens/chaveiro2.jpg" alt="Chaveiro 3D 2">
+          <img src="/imagens/chaveiro3.jpg" alt="Chaveiro 3D 3">
+        </div>
+        <h3>Chaveiros 3D</h3>
+        <p>Projetos autorais e personalizados</p>
+      </a>
 
-  </div>
-</section>
+    </div>
+  </section>
 
-<footer>
-  © 2026 — Zelion Forge  
-  <br>Este site não realiza vendas diretas.
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    © 2026 — Zelion Forge  
+    <br>Este site não realiza vendas diretas.
+  </footer>
 
-<script>
-  document.querySelectorAll(".image-slider").forEach(slider => {
-    const images = slider.querySelectorAll("img");
-    let index = 0;
+  <!-- SCRIPT SLIDER -->
+  <script>
+    document.querySelectorAll(".image-slider").forEach(slider => {
+      const images = slider.querySelectorAll("img");
+      let index = 0;
 
-    images[index].style.opacity = 1;
-
-    setInterval(() => {
-      images[index].style.opacity = 0;
-      index = (index + 1) % images.length;
       images[index].style.opacity = 1;
-    }, 2500);
-  });
-</script>
+
+      setInterval(() => {
+        images[index].style.opacity = 0;
+        index = (index + 1) % images.length;
+        images[index].style.opacity = 1;
+      }, 2500);
+    });
+  </script>
 
 </body>
 </html>
