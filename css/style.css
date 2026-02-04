@@ -8,35 +8,29 @@
 }
 
 /* =========================
-   PALETA BASE (CONCEITO)
-   Fundo geral: escuro elegante
-   Cards: destaque sutil
-   Roxo: identidade Zelion
-========================= */
-
-/* =========================
    BODY
 ========================= */
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #1a1a1f; /* fundo principal */
-  color: #e6e6e6;
+  background-color: #121216; /* MAIS ESCURO */
+  color: #e2e2e2;
 }
 
 /* =========================
    NAV
 ========================= */
 nav {
-  background-color: #111116;
+  background-color: #0b0b10;
   padding: 14px;
   text-align: center;
   position: sticky;
   top: 0;
   z-index: 10;
+  border-bottom: 1px solid #1e1e28;
 }
 
 nav a {
-  color: #eaeaea;
+  color: #e6e6e6;
   margin: 0 18px;
   text-decoration: none;
   font-weight: bold;
@@ -48,15 +42,15 @@ nav a:hover {
 }
 
 /* =========================
-   HEADER (TOPO)
+   HEADER
 ========================= */
 header {
   text-align: center;
   padding: 90px 20px;
   background: linear-gradient(
     135deg,
-    #1b1b22,
-    #0f0f14
+    #16161d,
+    #0a0a0f
   );
 }
 
@@ -68,20 +62,20 @@ header img {
 
 header p {
   font-size: 1.1em;
-  color: #c9c9c9;
+  color: #bdbdbd;
   max-width: 650px;
   margin: 15px auto 0;
   line-height: 1.5;
 }
 
 /* =========================
-   SECTION GLOBAL
+   SECTION
 ========================= */
 section {
   padding: 80px 20px;
   max-width: 1100px;
-  margin: auto;
-  background-color: #1f1f26; /* remove o branco */
+  margin: 60px auto 0;
+  background-color: #17171f; /* MAIS ESCURO */
   border-radius: 28px;
 }
 
@@ -89,13 +83,13 @@ section {
    TÍTULOS
 ========================= */
 section h2 {
-  font-size: 1.8em;
-  margin-bottom: 25px;
+  font-size: 1.9em;
+  margin-bottom: 30px;
   color: #ffffff;
 }
 
 /* =========================
-   GRID DE CARDS
+   GRID
 ========================= */
 .products {
   display: grid;
@@ -113,8 +107,8 @@ section h2 {
    CARD
 ========================= */
 .card {
-  background-color: #26262f; /* destaque claro sobre fundo */
-  border-radius: 20px;
+  background-color: #1e1e28; /* MAIS ESCURO */
+  border-radius: 22px;
   padding: 22px;
   text-align: center;
   text-decoration: none;
@@ -124,11 +118,11 @@ section h2 {
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.6);
 }
 
 /* =========================
-   SLIDER DOS CARDS
+   SLIDER
 ========================= */
 .image-slider {
   position: relative;
@@ -137,6 +131,7 @@ section h2 {
   overflow: hidden;
   border-radius: 16px;
   margin-bottom: 16px;
+  background-color: #0f0f14;
 }
 
 .image-slider img {
@@ -150,35 +145,35 @@ section h2 {
 }
 
 /* =========================
-   TEXTO DO CARD
+   TEXTO CARD
 ========================= */
 .card h3 {
-  margin: 12px 0 6px;
-  font-size: 1.15em;
+  margin: 14px 0 6px;
+  font-size: 1.18em;
   color: #ffffff;
 }
 
 .card p {
   font-size: 0.95em;
-  color: #b8b8b8;
+  color: #a9a9a9;
 }
 
 /* =========================
    FOOTER
 ========================= */
 footer {
-  background-color: #111116;
-  padding: 32px 20px;
+  background-color: #0b0b10;
+  padding: 34px 20px;
   text-align: center;
   font-size: 0.85em;
-  color: #9a9a9a;
-  margin-top: 80px;
+  color: #8a8a8a;
+  margin-top: 90px;
+  border-top: 1px solid #1e1e28;
 }
 
 /* =====================================================
-   PÁGINA DE PRODUTO (DETALHE FINAL)
+   PÁGINA DE PRODUTO
 ===================================================== */
-
 .product-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -203,7 +198,7 @@ footer {
   object-fit: contain;
   border-radius: 18px;
   cursor: zoom-in;
-  background-color: #1a1a1f;
+  background-color: #121216;
 }
 
 /* SETAS */
@@ -211,7 +206,7 @@ footer {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.75);
   color: white;
   border: none;
   font-size: 32px;
@@ -230,7 +225,7 @@ footer {
 
 .product-info p {
   margin-bottom: 14px;
-  color: #cfcfcf;
+  color: #c6c6c6;
   line-height: 1.6;
 }
 
@@ -250,7 +245,7 @@ footer {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.92);
+  background: rgba(0,0,0,0.94);
   align-items: center;
   justify-content: center;
   z-index: 999;
