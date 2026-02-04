@@ -12,7 +12,7 @@
 ========================= */
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #faf9f7; /* claro, confortável, neutro */
+  background-color: #ffebd1; /* claro, confortável, neutro */
   color: #2b2b2b;
 }
 
@@ -65,7 +65,7 @@ header p {
    SECTION (FUNDO SUAVE)
 ========================= */
 section {
-  background-color: #fefefe; /* ainda neutro, mas separa do body */
+  background-color: #ffebd1; /* ainda neutro, mas separa do body */
   padding: 70px 20px;
   max-width: 1100px;
   margin: auto;
