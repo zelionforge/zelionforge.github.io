@@ -34,7 +34,7 @@ header img {
 header p {
   font-size: 1.1em;
   color: #cfcfcf;
-  max-width: 540px;
+  max-width: 650px;
   margin: 15px auto 0;
 }
 
@@ -66,7 +66,7 @@ nav a:hover {
 ========================= */
 section {
   padding: 60px 20px;
-  max-width: 1100px;
+  max-width: 540px;
   margin: auto;
 }
 
