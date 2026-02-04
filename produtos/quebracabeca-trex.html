@@ -16,18 +16,18 @@
 
 <nav>
   <a href="/index.html">Início</a>
-  <a href="/quebracabecas.html">Quebra-cabeças</a>
+  <a href="/home/quebracabecas.html">Quebra-cabeças</a>
 </nav>
 
 <section class="product-layout">
 
   <!-- GALERIA -->
   <div class="product-viewer">
-    <button class="nav prev" onclick="prevImg()">‹</button>
+    <button class="prev" onclick="prevImg()">‹</button>
 
     <img id="viewer-img" src="/imagens/qc-trex1.jpg" onclick="openLightbox()">
 
-    <button class="nav next" onclick="nextImg()">›</button>
+    <button class="next" onclick="nextImg()">›</button>
   </div>
 
   <!-- INFO -->
@@ -40,7 +40,7 @@
       desenvolvido para montagem manual e exibição.
     </p>
 
-    <ul>
+    <ul class="product-details">
       <li><strong>Tipo:</strong> Quebra-cabeça 3D</li>
       <li><strong>Material:</strong> Plástico (impressão 3D)</li>
       <li><strong>Montagem:</strong> Manual, sem cola</li>
@@ -48,12 +48,12 @@
 
     <a href="https://wa.me/SEUNUMEROAQUI" class="cta" target="_blank">
       Entrar em contato
+    </a>
 
   </div>
 
 </section>
 
-<!-- LIGHTBOX -->
 <div id="lightbox" onclick="closeLightbox()">
   <img id="lightbox-img">
 </div>
@@ -90,4 +90,3 @@
 
 </body>
 </html>
-
