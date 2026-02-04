@@ -8,32 +8,39 @@
 }
 
 /* =========================
+   PALETA BASE (CONCEITO)
+   Fundo geral: escuro elegante
+   Cards: destaque sutil
+   Roxo: identidade Zelion
+========================= */
+
+/* =========================
    BODY
 ========================= */
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #1f1f23;
-  color: #e8e8ea;
+  background-color: #1a1a1f; /* fundo principal */
+  color: #e6e6e6;
 }
 
 /* =========================
    NAV
 ========================= */
 nav {
-  background-color: #1a1a1f;
+  background-color: #111116;
   padding: 14px;
   text-align: center;
   position: sticky;
   top: 0;
   z-index: 10;
-  border-bottom: 1px solid #2e2e36;
 }
 
 nav a {
-  color: #e8e8ea;
+  color: #eaeaea;
   margin: 0 18px;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.2s ease;
 }
 
 nav a:hover {
@@ -41,12 +48,16 @@ nav a:hover {
 }
 
 /* =========================
-   HEADER
+   HEADER (TOPO)
 ========================= */
 header {
   text-align: center;
-  padding: 80px 20px;
-  background-color: #1a1a1f;
+  padding: 90px 20px;
+  background: linear-gradient(
+    135deg,
+    #1b1b22,
+    #0f0f14
+  );
 }
 
 header img {
@@ -57,18 +68,30 @@ header img {
 
 header p {
   font-size: 1.1em;
-  color: #b8b8be;
+  color: #c9c9c9;
   max-width: 650px;
   margin: 15px auto 0;
+  line-height: 1.5;
 }
 
 /* =========================
-   SECTION
+   SECTION GLOBAL
 ========================= */
 section {
-  padding: 70px 20px;
+  padding: 80px 20px;
   max-width: 1100px;
   margin: auto;
+  background-color: #1f1f26; /* remove o branco */
+  border-radius: 28px;
+}
+
+/* =========================
+   TÍTULOS
+========================= */
+section h2 {
+  font-size: 1.8em;
+  margin-bottom: 25px;
+  color: #ffffff;
 }
 
 /* =========================
@@ -77,8 +100,7 @@ section {
 .products {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
-  margin-top: 30px;
+  gap: 36px;
 }
 
 @media (max-width: 768px) {
@@ -91,33 +113,30 @@ section {
    CARD
 ========================= */
 .card {
-  background-color: #2b2b32;
-  border-radius: 18px;
+  background-color: #26262f; /* destaque claro sobre fundo */
+  border-radius: 20px;
   padding: 22px;
   text-align: center;
   text-decoration: none;
-  color: #e8e8ea;
-  border: 1px solid #3a3a44;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  color: inherit;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.6);
-  border-color: #9b6cff;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
 }
 
 /* =========================
-   SLIDER
+   SLIDER DOS CARDS
 ========================= */
 .image-slider {
   position: relative;
   width: 100%;
   height: 260px;
   overflow: hidden;
-  border-radius: 14px;
-  margin-bottom: 14px;
-  background-color: #1f1f23;
+  border-radius: 16px;
+  margin-bottom: 16px;
 }
 
 .image-slider img {
@@ -126,12 +145,12 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: opacity 0.5s ease;
   opacity: 0;
+  transition: opacity 0.6s ease;
 }
 
 /* =========================
-   TEXTO DOS CARDS
+   TEXTO DO CARD
 ========================= */
 .card h3 {
   margin: 12px 0 6px;
@@ -140,18 +159,114 @@ section {
 }
 
 .card p {
-  font-size: 0.9em;
-  color: #b8b8be;
+  font-size: 0.95em;
+  color: #b8b8b8;
 }
 
 /* =========================
    FOOTER
 ========================= */
 footer {
-  background-color: #1a1a1f;
-  padding: 30px 20px;
+  background-color: #111116;
+  padding: 32px 20px;
   text-align: center;
   font-size: 0.85em;
-  color: #9a9aa2;
-  border-top: 1px solid #2e2e36;
+  color: #9a9a9a;
+  margin-top: 80px;
+}
+
+/* =====================================================
+   PÁGINA DE PRODUTO (DETALHE FINAL)
+===================================================== */
+
+.product-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .product-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* VISUALIZADOR */
+.product-viewer {
+  position: relative;
+}
+
+.product-viewer img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  border-radius: 18px;
+  cursor: zoom-in;
+  background-color: #1a1a1f;
+}
+
+/* SETAS */
+.product-viewer button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  font-size: 32px;
+  padding: 6px 14px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.product-viewer .prev { left: 10px; }
+.product-viewer .next { right: 10px; }
+
+/* INFO */
+.product-info h2 {
+  margin-bottom: 14px;
+}
+
+.product-info p {
+  margin-bottom: 14px;
+  color: #cfcfcf;
+  line-height: 1.6;
+}
+
+.product-details {
+  list-style: none;
+  margin-bottom: 22px;
+}
+
+.product-details li {
+  margin-bottom: 6px;
+}
+
+/* =========================
+   LIGHTBOX
+========================= */
+#lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.92);
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 16px;
+}
+
+#lightbox .close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
 }
