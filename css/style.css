@@ -8,11 +8,11 @@
 }
 
 /* =========================
-   BODY (FUNDO CLARO REAL)
+   BODY (FUNDO MAIS SUAVE)
 ========================= */
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #f6f4ef;
+  background-color: #ece5d9; /* bege suave */
   color: #2b2b2b;
 }
 
@@ -20,7 +20,7 @@ body {
    NAV
 ========================= */
 nav {
-  background-color: #15151d;
+  background-color: #1a1a22;
   padding: 14px;
   text-align: center;
   position: sticky;
@@ -40,7 +40,7 @@ nav a:hover {
 }
 
 /* =========================
-   HEADER (ESCURO PREMIUM)
+   HEADER (TOPO ESCURO)
 ========================= */
 header {
   text-align: center;
@@ -56,19 +56,20 @@ header img {
 
 header p {
   font-size: 1.1em;
-  color: #cfcfcf;
+  color: #d1d1d1;
   max-width: 650px;
   margin: 15px auto 0;
 }
 
 /* =========================
-   SECTION (FORÇANDO FUNDO CLARO)
+   SECTION (FUNDO LEVE)
 ========================= */
 section {
-  background-color: #f6f4ef;
+  background-color: #f3eee4; /* bege um pouco mais claro que o body */
   padding: 70px 20px;
   max-width: 1100px;
   margin: auto;
+  border-radius: 12px;
 }
 
 /* =========================
@@ -88,10 +89,11 @@ section {
 }
 
 /* =========================
-   CARD
+   CARD (COM CONTRASTE)
 ========================= */
 .card {
-  background-color: #ffffff;
+  background-color: #ffffff; /* branco leve */
+  border: 2px solid #dfd9cf; /* borda suave */
   border-radius: 18px;
   padding: 20px;
   text-align: center;
@@ -102,7 +104,7 @@ section {
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
 }
 
 /* =========================
@@ -128,11 +130,12 @@ section {
 }
 
 /* =========================
-   TEXTO
+   TEXTO DO CARD
 ========================= */
 .card h3 {
   margin: 10px 0 6px;
-  font-size: 1.1em;
+  font-size: 1.15em;
+  color: #2b2b2b;
 }
 
 .card p {
@@ -144,9 +147,9 @@ section {
    FOOTER
 ========================= */
 footer {
-  background-color: #ece9e2;
+  background-color: #dcd6ce;
   padding: 30px 20px;
   text-align: center;
   font-size: 0.85em;
-  color: #5a5a5a;
+  color: #4a4a4a;
 }
