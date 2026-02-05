@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Zelion Forge</title>
 
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -17,16 +17,14 @@
     <a href="#colecao">Coleção</a>
   </nav>
 
-
   <!-- HEADER / HERO -->
   <header id="hero">
     <img src="imagens/logo.png" alt="Zelion Forge Logo" id="hero-logo">
     <p>
-    Criações 3D, colecionáveis e ideias que nasceram do universo geek —  
-    feitas por quem cresceu, mas nunca deixou de criar.
+      Criações 3D, colecionáveis e ideias que nasceram do universo geek —  
+      feitas por quem cresceu, mas nunca deixou de criar.
     </p>
   </header>
-
 
   <!-- COLEÇÃO -->
   <section id="colecao">
@@ -34,21 +32,21 @@
 
     <div class="products">
 
-      <a href="/home/quebracabecas.html" class="card">
+      <a href="home/quebracabecas.html" class="card">
         <div class="image-slider">
-          <img src="/imagens/qc-trex1.jpg">
-          <img src="/imagens/qc-trex2.jpg">
-          <img src="/imagens/qc-trex3.jpg">
+          <img src="imagens/qc-trex1.jpg">
+          <img src="imagens/qc-trex2.jpg">
+          <img src="imagens/qc-trex3.jpg">
         </div>
         <h3>Quebra-cabeças 3D</h3>
         <p>Modelos impressos em 3D para montagem</p>
       </a>
 
-      <a href="/home/chaveiros.html" class="card">
+      <a href="home/chaveiros.html" class="card">
         <div class="image-slider">
-          <img src="/imagens/chaveiro1.jpg">
-          <img src="/imagens/chaveiro2.jpg">
-          <img src="/imagens/chaveiro3.jpg">
+          <img src="imagens/chaveiro1.jpg">
+          <img src="imagens/chaveiro2.jpg">
+          <img src="imagens/chaveiro3.jpg">
         </div>
         <h3>Chaveiros 3D</h3>
         <p>Projetos autorais e personalizados</p>
@@ -89,23 +87,14 @@
       const trigger = hero.offsetHeight * 0.6;
 
       if (scrollY > trigger) {
-        heroLogo.style.opacity = "0";
-        heroLogo.style.pointerEvents = "none";
-
-        navLogo.style.opacity = "1";
-        navLogo.style.transform = "scale(1)";
+        heroLogo.classList.add("hero-hidden");
+        navLogo.classList.add("nav-visible");
       } else {
-        heroLogo.style.opacity = "1";
-        heroLogo.style.pointerEvents = "auto";
-
-        navLogo.style.opacity = "0";
-        navLogo.style.transform = "scale(0.6)";
+        heroLogo.classList.remove("hero-hidden");
+        navLogo.classList.remove("nav-visible");
       }
     });
   </script>
 
-
 </body>
 </html>
-
-
