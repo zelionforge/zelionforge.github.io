@@ -46,7 +46,7 @@ nav a:hover {
 ========================= */
 header {
   text-align: center;
-  padding: 90px 20px;
+  padding: 60px 20px 50px;
   background: linear-gradient(
     135deg,
     #16161d,
@@ -57,15 +57,15 @@ header {
 header img {
   max-width: 340px;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 header p {
-  font-size: 1.1em;
+  font-size: 1.05em;
   color: #bdbdbd;
-  max-width: 650px;
+  max-width: 620px;
   margin: 15px auto 0;
-  line-height: 1.5;
+  line-height: 1.45;
 }
 
 /* =========================
