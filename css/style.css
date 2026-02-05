@@ -54,10 +54,12 @@ header {
   );
 }
 
-header img {
-  max-width: 440px;
+#hero-logo {
+  max-width: 360px;
   width: 100%;
   margin-bottom: 14px;
+  transition: transform 0.15s ease-out;
+  will-change: transform;
 }
 
 header p {
