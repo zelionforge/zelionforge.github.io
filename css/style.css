@@ -21,12 +21,21 @@ body {
 ========================= */
 nav {
   background-color: #0b0b10;
-  padding: 14px;
-  text-align: center;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 100;
   border-bottom: 1px solid #1e1e28;
+}
+
+#nav-logo {
+  height: 38px;
+  opacity: 0;
+  transform: scale(0.6);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 nav a {
@@ -53,12 +62,10 @@ header {
 }
 
 #hero-logo {
-  max-width: 420px;
+  max-width: 360px;
   width: 100%;
   margin-bottom: 14px;
-  transition: transform 0.15s ease-out;
-  will-change: transform;
-  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.55));
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 header p {
