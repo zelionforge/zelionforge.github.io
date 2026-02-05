@@ -17,8 +17,8 @@
   </nav>
 
   <!-- HEADER -->
-  <header>
-    <img src="/imagens/logo.png" alt="Zelion Forge Logo">
+  <header id="hero">
+    <img src="/imagens/logo.png" alt="Zelion Forge Logo" id="hero-logo">
     <p>
       Criações 3D, colecionáveis e ideias que nasceram do universo geek —  
       feitas por quem cresceu, mas nunca deixou de criar.
@@ -77,6 +77,29 @@
       }, 2500);
     });
   </script>
+<script>
+  const logo = document.getElementById("hero-logo");
+  const hero = document.getElementById("hero");
+  const colecao = document.getElementById("colecao");
+
+  window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    const heroHeight = hero.offsetHeight;
+    const limit = heroHeight * 0.8;
+
+    const progress = Math.min(scrollY / limit, 1);
+
+    const scale = 1 - progress * 0.45;
+    const translateY = progress * -90;
+    const translateX = progress * -160;
+
+    logo.style.transform = `
+      translate(${translateX}px, ${translateY}px)
+      scale(${scale})
+    `;
+  });
+</script>
 
 </body>
 </html>
+
