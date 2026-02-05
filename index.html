@@ -12,14 +12,20 @@
 
   <!-- NAV -->
   <nav id="navbar">
-    <img src="imagens/logo.png" alt="Zelion Forge Logo" id="nav-logo">
+    <div class="nav-placeholder"></div>
     <a href="index.html">Início</a>
     <a href="#colecao">Coleção</a>
   </nav>
 
-  <!-- HEADER / HERO -->
+  <!-- LOGO ÚNICA -->
+  <img
+    src="imagens/logo.png"
+    alt="Zelion Forge Logo"
+    id="floating-logo"
+  >
+
+  <!-- HERO -->
   <header id="hero">
-    <img src="imagens/logo.png" alt="Zelion Forge Logo" id="hero-logo">
     <p>
       Criações 3D, colecionáveis e ideias que nasceram do universo geek —  
       feitas por quem cresceu, mas nunca deixou de criar.
@@ -76,22 +82,18 @@
     });
   </script>
 
-  <!-- LOGO ANIMATION -->
+  <!-- LOGO SYNC -->
   <script>
-    const heroLogo = document.getElementById("hero-logo");
-    const navLogo = document.getElementById("nav-logo");
+    const logo = document.getElementById("floating-logo");
     const hero = document.getElementById("hero");
 
     window.addEventListener("scroll", () => {
-      const scrollY = window.scrollY;
       const trigger = hero.offsetHeight * 0.6;
 
-      if (scrollY > trigger) {
-        heroLogo.classList.add("hero-hidden");
-        navLogo.classList.add("nav-visible");
+      if (window.scrollY > trigger) {
+        logo.classList.add("logo-nav");
       } else {
-        heroLogo.classList.remove("hero-hidden");
-        navLogo.classList.remove("nav-visible");
+        logo.classList.remove("logo-nav");
       }
     });
   </script>
