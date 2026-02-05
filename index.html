@@ -80,27 +80,32 @@
 
   <!-- LOGO ANIMATION -->
   <script>
-    const logo = document.getElementById("hero-logo");
+    const heroLogo = document.getElementById("hero-logo");
+    const navLogo = document.getElementById("nav-logo");
     const hero = document.getElementById("hero");
 
     window.addEventListener("scroll", () => {
       const scrollY = window.scrollY;
-      const heroHeight = hero.offsetHeight;
-      const limit = heroHeight * 0.75;
+      const trigger = hero.offsetHeight * 0.6;
 
-      const progress = Math.min(scrollY / limit, 1);
+      if (scrollY > trigger) {
+        heroLogo.style.opacity = "0";
+        heroLogo.style.pointerEvents = "none";
 
-      const scale = 1 - progress * 0.4;
-      const translateY = progress * -80;
-      const translateX = progress * -110;
+        navLogo.style.opacity = "1";
+        navLogo.style.transform = "scale(1)";
+      } else {
+        heroLogo.style.opacity = "1";
+        heroLogo.style.pointerEvents = "auto";
 
-      logo.style.transform = `
-        translate(${translateX}px, ${translateY}px)
-        scale(${scale})
-      `;
+        navLogo.style.opacity = "0";
+        navLogo.style.transform = "scale(0.6)";
+      }
     });
   </script>
 
+
 </body>
 </html>
+
 
